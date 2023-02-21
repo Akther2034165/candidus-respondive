@@ -1,0 +1,141 @@
+:root {
+  --black: #1c1c1c;
+  --gray: #919191;
+  --light-gray: #ebebeb;
+  --hot-pink: #ff214f;
+  --primary-font: "Roboto", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--primary-font);
+  background-color: var(--light-gray);
+}
+.container {
+  padding: 0 25px;
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+.nav-section {
+  margin-top: 25px;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  top: 80px;
+}
+nav > ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.section-primary {
+  padding: 14rem 25px;
+  background-color: var(--light-gray);
+}
+.section-secondary {
+  padding: 14rem 25px;
+  background-color: var(--black);
+}
+.section-title-primary,
+.section-title-secondary,
+.section-title-tertiary {
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+.section-title-primary {
+  color: var(--black);
+}
+.section-title-secondary {
+  color: var(--hot-pink);
+}
+.section-title-tertiary {
+  color: var(--light-gray);
+}
+.line-primary,
+.line-secondary,
+.line-tertiary {
+  width: 100%;
+  height: 1px;
+  margin-left: 5px;
+}
+.line-primary {
+  background-color: var(--black);
+}
+.line-secondary {
+  background-color: var(--hot-pink);
+}
+.line-tertiary {
+  background-color: var(--light-gray);
+}
+.section-title-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.section-text-primary,
+.section-text-secondary,
+.section-text-tertiary {
+  font-size: 3rem;
+  font-weight: 300;
+}
+.section-text-primary {
+  color: var(--black);
+}
+.section-text-secondary {
+  color: var(--hot-pink);
+}
+.section-text-tertiary {
+  color: var(--light-gray);
+}
+
+.photo-gallary {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.photo-gallary > img {
+  width: 100%;
+  height: 100%;
+}
+.long-img {
+  grid-row: span 2;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 850px) {
+  .photo-gallary {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  nav > ul {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+  }
+  .line-primary,
+  .line-secondary,
+  .line-tertiary {
+    display: none;
+  }
+  .section-title-container {
+    justify-content: center;
+  }
+  .section-text-primary,
+  .section-text-secondary,
+  .section-text-tertiary {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+}
